@@ -1,0 +1,16 @@
+{
+  "input": "/data/250010105/NLP_final_project/AP0004_Midterm&Final_translation_dataset_zh_en/valid.jsonl",
+  "output_dir": "/data/250010105/NLP_final_project/out_hf_opusmt_train",
+  "out_name": "processed_valid.jsonl",
+  "hf_checkpoint": "Helsinki-NLP/opus-mt-zh-en",
+  "cache_dir": "",
+  "local_files_only": true,
+  "lower_en": true,
+  "max_char_len_zh": 300,
+  "max_char_len_en": 500,
+  "char_len_policy": "filter",
+  "max_len_zh": 80,
+  "max_len_en": 80,
+  "len_policy": "filter",
+  "write_tokens": true
+}
