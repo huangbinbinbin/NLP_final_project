@@ -1,0 +1,11 @@
+{
+  "hf_checkpoint": "Helsinki-NLP/opus-mt-zh-en",
+  "pad_token_id": 65000,
+  "unk_token_id": 1,
+  "eos_token_id": 0,
+  "bos_token_id": null,
+  "decoder_start_token_id": 0,
+  "src_vocab_size": 65001,
+  "tgt_vocab_size": 65001,
+  "notes": "Plan A: native tokenizer ids; no BOS; decoder start uses eos_token_id in training."
+}
