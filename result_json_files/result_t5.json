@@ -1,0 +1,80 @@
+[
+  {
+    "exp": "ft_t5=mt5-small_decode=greedy",
+    "type": "finetune",
+    "model_type": "t5",
+    "train_batch_size": 16,
+    "train_lr": 0.0001,
+    "dev_bleu": 12.54,
+    "dev_long_bleu": 12.76,
+    "dev_latency_ms": 15.74,
+    "dev_tok_per_sec": 4274.9,
+    "train_metrics": {
+      "mode": "t5",
+      "t5_name": "/data/250010105/hf_models/mt5-small",
+      "best_dev_loss": 2.3861557692289352,
+      "total_time_sec": 4201.479399204254,
+      "avg_step_time_sec": 0.04674826737674507,
+      "steps_per_sec": 21.39116711943532,
+      "peak_gpu_mem_mb": 10054.56787109375,
+      "param_count": 300176768,
+      "final_opt_step": 74000
+    },
+    "infer_config": {
+      "decode": "greedy",
+      "beam_size": 1,
+      "alpha": 0.0,
+      "len_norm": "none",
+      "max_len": 80,
+      "min_len": 10,
+      "infer_batch_size": 32,
+      "t5_length_penalty": 1.0,
+      "t5_model_dir": "/data/250010105/hf_models/mt5-small",
+      "t5_prompt": "translate Chinese to English: ",
+      "local_files_only": true,
+      "hf_name_or_dir": "/data/250010105/hf_models/opus-mt-zh-en",
+      "tokenizer_meta": "/data/250010105/NLP_final_project/out_hf_opusmt_train/tokenizer_meta.json"
+    },
+    "test_bleu": 8.78,
+    "test_long_bleu": 6.13
+  },
+  {
+    "exp": "ft_t5=mt5-small_decode=beam_bs5_lp1.0",
+    "type": "finetune",
+    "model_type": "t5",
+    "train_batch_size": 16,
+    "train_lr": 0.0001,
+    "dev_bleu": 13.8,
+    "dev_long_bleu": 13.35,
+    "dev_latency_ms": 263.19,
+    "dev_tok_per_sec": 124.7,
+    "train_metrics": {
+      "mode": "t5",
+      "t5_name": "/data/250010105/hf_models/mt5-small",
+      "best_dev_loss": 2.3861557692289352,
+      "total_time_sec": 4201.479399204254,
+      "avg_step_time_sec": 0.04674826737674507,
+      "steps_per_sec": 21.39116711943532,
+      "peak_gpu_mem_mb": 10054.56787109375,
+      "param_count": 300176768,
+      "final_opt_step": 74000
+    },
+    "infer_config": {
+      "decode": "beam",
+      "beam_size": 5,
+      "alpha": 0.6,
+      "len_norm": "gnmt",
+      "max_len": 80,
+      "min_len": 10,
+      "infer_batch_size": 1,
+      "t5_length_penalty": 1.0,
+      "t5_model_dir": "/data/250010105/hf_models/mt5-small",
+      "t5_prompt": "translate Chinese to English: ",
+      "local_files_only": true,
+      "hf_name_or_dir": "/data/250010105/hf_models/opus-mt-zh-en",
+      "tokenizer_meta": "/data/250010105/NLP_final_project/out_hf_opusmt_train/tokenizer_meta.json"
+    },
+    "test_bleu": 9.7,
+    "test_long_bleu": 7.12
+  }
+]
