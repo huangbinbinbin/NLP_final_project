@@ -1,0 +1,1 @@
+请根据我在NLP_final_project/readme.md中提供的网盘链接下载checkpoint文件
